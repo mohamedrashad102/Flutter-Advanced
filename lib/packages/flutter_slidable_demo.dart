@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_advanced/core/utils/app_style.dart';
 import 'package:flutter_advanced/core/widgets/custom_app_bar.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 
@@ -45,26 +46,37 @@ class FlutterSlidableDemo extends StatelessWidget {
                         ),
                       ],
                     ),
-                    child: Container(
-                      width: double.infinity,
-                      height: 80,
-                      decoration: BoxDecoration(
-                        color: Colors.deepPurple.shade300,
-                      ),
-                      alignment: Alignment.center,
-                      child: Text(
-                        key,
-                        style: const TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
+                    child: Item(key),
                   ),
                 ),
               )
               .toList(),
         ),
+      ),
+    );
+  }
+}
+
+class Item extends StatelessWidget {
+  const Item(
+    this.title, {
+    super.key,
+  });
+
+  final String title;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: double.infinity,
+      height: 80,
+      decoration: BoxDecoration(
+        color: Colors.deepPurple.shade300,
+      ),
+      alignment: Alignment.center,
+      child: Text(
+        title,
+        style: AppStyle.regularStyle,
       ),
     );
   }
