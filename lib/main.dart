@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_advanced/packages/flutter_hooks_demo.dart';
 
 import 'core/theme/dark_theme.dart';
-import 'packages/flutter_slidable_demo.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +16,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       darkTheme: darkTheme(),
       themeMode: ThemeMode.dark,
-      home: const FlutterSlidableDemo(),
+      home: const Scaffold(
+        body: FlutterHooksDemo(),
+      ),
     );
   }
 }

@@ -46,7 +46,7 @@ class FlutterSlidableDemo extends StatelessWidget {
                         ),
                       ],
                     ),
-                    child: Item(key),
+                    child: CustomItem(key),
                   ),
                 ),
               )
@@ -57,8 +57,8 @@ class FlutterSlidableDemo extends StatelessWidget {
   }
 }
 
-class Item extends StatelessWidget {
-  const Item(
+class CustomItem extends StatelessWidget {
+  const CustomItem(
     this.title, {
     super.key,
   });
